@@ -1,0 +1,15 @@
+{
+  "name": "mockjson",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "winston": "~0.6.2",
+    "uglify-js": "*",
+    "express3-handlebars": "*",
+    "aws-sdk": "*"
+  }
+}

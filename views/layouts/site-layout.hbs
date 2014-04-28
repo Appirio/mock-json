@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{page.head.title}}</title>
+  <meta name="description" content="{{page.head.description}}">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="{{asset 'img/favicon.ico'}}"/>
+
+  <link rel="stylesheet" href="{{asset 'css/bootstrap.min.css'}}">
+  <link rel="stylesheet" href="{{asset 'css/bootstrap-responsive.min.css'}}">
+  <link rel="stylesheet" href="{{asset 'css/custom.css'}}">
+
+    {{! we need modernizr for the older browser polyfill }}
+  <script src="{{asset 'js/libs/modernizr.min.js'}}"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{{asset 'js/bootstrap.min.js'}}"></script>
+  <script src="{{asset 'js/main.js'}}"></script>
+</head>
+<body>
+<div id="wrap">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a href="/" rel="home" class="brand">MockJSON</a>
+
+        <div class="nav-collapse">
+          <!--<ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#/contacts">Contact</a></li>
+          </ul>-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    {{! the body will come from a specific page (ex. see home.hbs) }}
+    {{{body}}}
+</div>
+<footer>
+  <div class="container">
+    &copy; 2013 Appirio
+  </div>
+</footer>
+</body>
+</html>

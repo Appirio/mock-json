@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>Generate MockJSON</h1>
+    </div>
+  </div>
+  <div class="minify-mockjson">
+    <h3>What is MockJson?</h3>
+
+    <p>
+      MockJson is a XMLHttpRequest mocking and expectations library for javascript.
+      You can set up API endpoints with expected templates.
+      MockJson can be used during development phase without worring of the real connection to the API server.
+      It is especially useful since you can avoid the <a href="http://en.wikipedia.org/wiki/Same_origin_policy">same
+      origin policy</a>
+    </p>
+
+    <h3>Generate MockJson javascript file</h3>
+
+    <p>
+      MockJson consists of several basic files and useful helper files for the API endpoints.
+      The following offers the method to concatenate these files for your taste.
+      Choose APIs you want to use and Generate unified MockJson javascript file. <br>You can download the generated
+      file, or just get the link.
+    </p>
+  </div>
+  <form method="POST" action="/">
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="well">
+          <fieldset>
+            <legend>API's to include</legend>
+            {{#each page.apiNames}}
+              <label class="checkbox">
+                <input type="checkbox" name="{{this}}"> {{this}}
+              </label>
+            {{/each}}
+            <br>
+          </fieldset>
+        </div>
+
+      </div>
+      <div class="span6">
+        <div class="well">
+          <fieldset>
+            <legend>Deployment Type</legend>
+            <label class="radio">
+              <input type="radio" name="deployment_type" value="download" checked>
+              Download
+            </label>
+            <label class="radio">
+              <input type="radio" name="deployment_type" value="link">
+              Link
+            </label>
+          </fieldset>
+        </div>
+        <div class="well">
+          <label class="checkbox">
+            <input type="checkbox" name="minify"> Minify
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span12">
+        <button class="span6 btn btn-success btn-large">Generate</button>
+      </div>
+    </div>
+  </form>
+</div>

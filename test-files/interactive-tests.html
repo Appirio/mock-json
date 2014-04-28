@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Mock JSON API Library - Interactive Tests</title>
+
+  <script src="../lib/sinon/sinon-server-1.7.1.js"></script>
+  <script src="../lib/sinon/sinon-ie-1.7.1.js"></script>
+  <script src="../lib/mockjson/template-module.js"></script>
+  <script src="../lib/mockjson/api-library.js"></script>
+  <script src="../lib/plugins/box.js"></script>
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="./json-calls-to-box-api.js"></script>
+  <script src="./interactive-tests.js"></script>
+</head>
+
+<body>
+<h1>Mock JSON API Library - Interactive Tests</h1>
+
+<h3>Select a Box.com REST API Endpoint:</h3>
+
+<input type="radio" name="endpoint" value="getFolderItems" id="getFolderItems" checked="checked"/>
+<label for="getFolderItems">
+  Retrieve a Folder&#39;s Items: &nbsp; <code>GET /folders/{folder_id}/items</code>
+</label>
+<br/>
+
+<input type="radio" name="endpoint" value="getFolderInfo" id="getFolderInfo"/>
+<label for="getFolderInfo">
+  Get Info About a Folder: &nbsp; <code>GET /folders/{folder_id}</code>
+</label>
+<br/>
+
+<input type="radio" name="endpoint" value="postNewFolder" id="postNewFolder"/>
+<label for="postNewFolder">
+  Create a New Folder: &nbsp; <code>POST /folders</code>
+</label>
+<br/>
+
+<input type="radio" name="endpoint" value="putFolderInfo" id="putFolderInfo"/>
+<label for="putFolderInfo">
+  Update Info About a Folder: &nbsp; <code>PUT /folders/{folder_id}</code>
+</label>
+<br/>
+
+<input type="radio" name="endpoint" value="deleteFolder" id="deleteFolder"/>
+<label for="deleteFolder">
+  Delete a Folder: &nbsp; <code>DELETE /folders/{folder_id}</code>
+</label>
+<br/>
+<br/>
+
+<input type="checkbox" name="includeAuthHeader" id="includeAuthHeader" value="includeAuthHeader" checked="checked"/>
+<label for="includeAuthHeader">
+  Include an Authorization header in the AJAX requests (uncheck to see what happens)
+</label>
+<br/>
+<br/>
+
+<input type="button" name="generate" id="generate" value="Generate"/>
+
+<h3>View the Mock Response Here:</h3>
+
+<p>
+  <b>Response Status:</b> <span id="responseStatus"></span>
+</p>
+
+<textarea name="responseBody" id="responseBody" rows="20" cols="100"></textarea>
+</body>
+</html>

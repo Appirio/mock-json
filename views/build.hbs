@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>How to use MockJSON Library</h1>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span12">
+      <p>
+        <ol>
+            <li>
+              <p>Include the generated MockJson file in your HTML file. For example,</p>
+              <pre>"&lt;script type='text/javascript' src='/javascripts/mock-json.js'&gt;&lt;/script&gt;"</pre>
+              <p>If you selected some of APIs, generated MockJson file already has the basic api endpoint settings for the API endpoint.</p>
+            </li>
+            <li>
+              <p>If this is not engough for you, you can add your own endpoints. For example,</p>
+              <pre>
+MockJsonApiLib.addMockEndpoints({
+    method: "GET",
+    url: "https://api.box.com/2.0/folders/:folderId/items",
+    handler: fundtion(request, response) {}
+    // ...
+});
+              </pre>
+            </li>
+            <li>
+              <code>MockJsonApiLib</code> is enabled by including the <code>mock-json.js</code> file. So use and enjoy!
+            </li>
+        </ol>
+      </p>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <a href="{{page.body.link}}">A link to download</a>
+      <pre>&lt;script src="{{page.body.link}}"&gt;&lt;/script&gt;</pre>
+    </div>
+    <div class="span6">
+      <img src="http://oddlovescompany.com/wp-content/uploads/2013/05/may-the-fourth-be-with-you.jpg">
+    </div>
+  </div>
+  <div class="row-fluid">
+
+  </div>
+</div>
